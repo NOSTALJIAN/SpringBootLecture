@@ -1,8 +1,8 @@
 package com.mulcam.demo.entity;
 
 public class StaticMap {
-	private String width;
-	private String height;
+	private int width;
+	private int height;
 	private double lat;
 	private double lng;
 	private int level;
@@ -11,35 +11,27 @@ public class StaticMap {
 	private String scale;
 	private String lang;
 	
-	public StaticMap() {}
+	public StaticMap() { }
 
-	public StaticMap(String width, String height, double lat, double lng, int level, String maptype, String format,
-			String scale, String lang) {
-		super();
-		this.width = width;
-		this.height = height;
-		this.lat = lat;
-		this.lng = lng;
-		this.level = level;
-		this.maptype = maptype;
-		this.format = format;
-		this.scale = scale;
-		this.lang = lang;
+	@Override
+	public String toString() {
+		return "StaticMap [width=" + width + ", height=" + height + ", lat=" + lat + ", lng=" + lng + ", level=" + level
+				+ ", maptype=" + maptype + ", format=" + format + ", scale=" + scale + ", lang=" + lang + "]";
 	}
 
-	public String getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
-	public void setWidth(String width) {
+	public void setWidth(int width) {
 		this.width = width;
 	}
 
-	public String getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
-	public void setHeight(String height) {
+	public void setHeight(int height) {
 		this.height = height;
 	}
 
@@ -98,11 +90,4 @@ public class StaticMap {
 	public void setLang(String lang) {
 		this.lang = lang;
 	}
-
-	@Override
-	public String toString() {
-		return "StaticMap [width=" + width + ", height=" + height + ", lat=" + lat + ", lng=" + lng + ", level=" + level
-				+ ", maptype=" + maptype + ", format=" + format + ", scale=" + scale + ", lang=" + lang + "]";
-	}
-	
 }
